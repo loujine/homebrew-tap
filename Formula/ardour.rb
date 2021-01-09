@@ -2,8 +2,8 @@ class Ardour < Formula
   desc "A digital audio workstation"
   homepage "https://ardour.org/"
   url "https://community.ardour.org/srctar"
-  version "6.0"
-  sha256 "3cd79b006d7563b7ed7ba4c73a842edf3a967aca72325735e956fa1fa632f896"
+  version "6.5"
+  sha256 "ac981ec7565fa8a171116bc2fbeb3198a01aad4b7d7c846f965e074a8a162bdb"
   head "https://github.com/Ardour/ardour.git"
 
   depends_on "aubio"
@@ -34,7 +34,7 @@ class Ardour < Formula
     system "./waf", "install"
 
     cd "./tools/osx_packaging" do
-      system "./osx_build", "--help"
+      system "./osx_build", "--public"
     end
   end
 
